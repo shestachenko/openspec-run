@@ -1,0 +1,23 @@
+{
+  "name": "openspec-run",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Small REST API on Fastify and TypeScript, developed with OpenSpec.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fastify": "^5.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}

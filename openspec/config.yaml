@@ -1,0 +1,50 @@
+schema: spec-driven
+
+context: |
+  Language: Russian
+  All artifacts must be written in Russian.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  Project: openspec-run, a small JSON REST API.
+  Runtime: Node.js >= 20.19, npm, ESM ("type": "module").
+  Stack: Fastify 5 and strict TypeScript. No extra framework.
+  Layout: src/app.ts builds the Fastify instance. src/server.ts listens.
+  Imports use the .ts extension. tsc rewrites them to .js under dist/.
+  Dev command: node --watch src/server.ts.
+  API: JSON only. GET /health returns { "status": "ok" }.
+  Bind: HOST defaults to 0.0.0.0, PORT defaults to 3000.
+  Workflow: spec-driven. New behavior goes through an OpenSpec change before code.
+
+rules:
+  proposal:
+    - State what is out of scope
+    - Name the HTTP routes the change adds or changes
+  specs:
+    - Describe each route by method, path, request, response, and errors
+    - Use Given/When/Then for scenarios
+  design:
+    - Extend the Fastify app in src/app.ts instead of adding another server
+  tasks:
+    - Include npm run typecheck and a request against the running server
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
