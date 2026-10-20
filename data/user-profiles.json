@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "addresses": [
+      {
+        "country": "FI",
+        "city": "Helsinki",
+        "street": "Aleksanterinkatu"
+      }
+    ],
+    "teams": [
+      {
+        "name": "Core",
+        "department": "Engineering"
+      }
+    ],
+    "manager": "Ada Lovelace",
+    "salary": 100
+  },
+  {
+    "id": 10,
+    "addresses": [
+      {
+        "country": "SE",
+        "city": "Stockholm",
+        "street": "Drottninggatan"
+      }
+    ],
+    "teams": [
+      {
+        "name": "Platform",
+        "department": "Operations"
+      }
+    ],
+    "manager": "Grace Hopper",
+    "salary": 120.5
+  }
+]
