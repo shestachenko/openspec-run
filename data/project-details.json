@@ -1,0 +1,4 @@
+[
+  { "id": "a", "domain": "atlas.example", "networth": 100, "country": "FI" },
+  { "id": "c", "domain": "cedar.example", "networth": 40, "country": "SE" }
+]
